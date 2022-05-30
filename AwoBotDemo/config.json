@@ -1,0 +1,49 @@
+﻿{
+  "access": {
+    "database": "Data Source=database.db;Version=3;Data Source=c:\\mydb.db;Version=3;",
+    "discord": {
+      "type": "Bot",
+      "token": "<token>"
+    }
+  },
+  "logging": {
+    "LogLevel": {
+      "Default": "Trace",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "bot": {
+    "enable-console-out": true,
+    "migrate-on-start": true,
+    "reconnect-delay": "0:0:30",
+    "name": "Bot",
+    "status": "Status...",
+    "colors": {
+      "success": "#65EB34",
+      "error": "#FF0000",
+      "loading": "#ebc634"
+    },
+    "modules": {
+      "message-deleter": {
+        "enabled": true
+      },
+      "interaction-module": {
+        "enabled": true,
+        "interactions": {
+
+        }
+      },
+      "command-module": {
+        "enabled": true,
+        "prefix": {
+          "main": "bot",
+          "prefix1": "$"
+        },
+        "commands": {
+         
+        }
+      }
+    }
+  }
+}
