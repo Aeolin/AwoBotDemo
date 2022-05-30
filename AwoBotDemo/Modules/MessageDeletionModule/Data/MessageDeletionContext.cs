@@ -19,6 +19,11 @@ namespace AwoBotDemo.Modules.MessageDeletionModule.Data
     [Inject]
     private IConfiguration _config;
 
+    public MessageDeletionContext() : base(null)
+    {
+
+    }
+
     public MessageDeletionContext(IDependencyContainer container) : base(container)
     {
     }
@@ -44,7 +49,12 @@ namespace AwoBotDemo.Modules.MessageDeletionModule.Data
       _container?.PostInject(this);
       optionsBuilder.UseLazyLoadingProxies();
       if (optionsBuilder.IsConfigured == false)
-        optionsBuilder.UseSqlite(_config["access:database"]);
+      {
+        if (_config != null)
+          optionsBuilder.UseSqlite(_config["access:database"]);
+        else
+          optionsBuilder.UseSqlite();
+      }
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -11,7 +11,13 @@
     <PackageReference Include="Aeolin.reInject" Version="1.5.2" />
     <PackageReference Include="Aeolin.reInject.PostInjectors.BackgroundWorker" Version="1.5.2" />
     <PackageReference Include="Aeolin.reInject.Scopes" Version="1.5.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
